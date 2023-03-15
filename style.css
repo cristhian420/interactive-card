@@ -16,13 +16,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 18px;
 }
-
-
-
-
-
+label {
+  margin-bottom: 8px;
+}
 input[type="text"],
 input[type="number"] {
   border-radius: 5px;
@@ -32,8 +29,8 @@ input[type="number"] {
   font-weight: 500;
   height: 55px;
   padding: 8px;
+  width: 100%;
 }
-
 .main-container {
   display: grid;
   place-items: center;
@@ -60,6 +57,34 @@ input[type="number"] {
   border-radius: 8px;
   z-index: 2;
 }
+.card-data-container {
+  display: grid;
+  color: var(--white);
+  width: 80%;
+  row-gap: 14px;
+  grid-template-areas: 
+  'cardNumber cardNumber'
+  'cardName cardExp';
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  font-size: 13px;
+  font-weight: 300;
+}
+.card-number {
+  grid-area: cardNumber;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: justify;
+  word-spacing: 5px;
+}
+.card-name {
+  grid-area: cardName;
+}
+.card-expire {
+  grid-area: cardExp;
+  text-align: end;
+}
 .back-card {
   width: 275px;
   height: 150px;
@@ -84,25 +109,22 @@ input[type="number"] {
   top: 20px;
   left: 20px;
 }
-
-
-
 .form-section {
   width: 100%;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   max-width: 500px;
   margin: 0 auto;
+  color: var(--very-dark-violet);
 }
 .form-data-container {
   display: grid;
   grid-template-areas:
-  'labelExp labelExp labelCVC' 
-  'MM YY CVC';
-  gap: 8px;
-  padding: 10px;
+  'labelExp labelExp labelCVC labelCVC' 
+  'MM YY CVC CVC';
   width: 100%;
+  column-gap: 8px;
 }
 .labelExp {
   grid-area: labelExp;
@@ -119,8 +141,6 @@ input[type="number"] {
 .CVC {
   grid-area: CVC;
 }
-.MM,.CVC,.YY{width: 100%;}
-
 .button {
   width: 100%;
   height: 50px;
@@ -129,7 +149,14 @@ input[type="number"] {
   color: var(--white);
   cursor: pointer;
   border: none;
+  font-size: 18px;
 }
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+  font-size: 12px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: var(--dark-grayish-violet);
+  text-decoration: none;
+  cursor: pointer;
+}
