@@ -103,7 +103,7 @@ input::placeholder{
   left: 15%;
   border-radius: 8px;
 }
-.CVN {
+.card-CVC {
   position: absolute;
   top: 66px;
   right: 33px;
@@ -183,7 +183,7 @@ input::placeholder{
     box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.651);
   }
   .back-card {
-    top: 49%;
+    top: 52%;
     left: 5%;
   }
 
